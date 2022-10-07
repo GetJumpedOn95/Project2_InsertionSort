@@ -8,7 +8,7 @@ func readFile(filename:String) -> Array<Substring> {
     //Split the file on endline (\n)
     let lines = contents.split(separator:"\n")
 
-    print("Num words: \(lines.count)")
+//    print("Num words: \(lines.count)")
 
     return lines
 }
@@ -17,7 +17,7 @@ func readFile(filename:String) -> Array<Substring> {
 func insertionSort(strings:Array<Substring>) -> [Substring] {
     var a = strings
     var totalSwaps = 0
-    print("Pass: 0, Swaps: 0/0, Array: \(a)") 
+  //  print("Pass: 0, Swaps: 0/0, Array: \(a)") 
     for x in 1..<a.count {
         var swaps = 0
         var y = x
@@ -34,7 +34,7 @@ func insertionSort(strings:Array<Substring>) -> [Substring] {
     return a
 }
 
-var filename = "random.txt"
+var filename = "ordered-10e0.txt"
 var strings = readFile(filename:filename)
 let sortedArray = insertionSort(strings:strings)
-//print("Array: \(sortedArray)")
+print("Array: \(sortedArray)")
