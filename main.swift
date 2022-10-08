@@ -1,3 +1,4 @@
+
 import Foundation
 
 func readFile(filename:String) -> Array<Substring> {
@@ -29,12 +30,12 @@ func insertionSort(strings:Array<Substring>) -> [Substring] {
             totalSwaps = totalSwaps + 1
         }
         a[y] = temp                      // 2
-        print("Pass: \(x), Swaps: \(swaps)/\(totalSwaps), Array: \(a)")
+      //  print("Pass: \(x), Swaps: \(swaps)/\(totalSwaps), Array: \(a)")
     }
     return a
 }
 
-var filename = "ordered-10e0.txt"
+var filename = "random-ordered-10e5.txt"
 var strings = readFile(filename:filename)
 let sortedArray = insertionSort(strings:strings)
-print("Array: \(sortedArray)")
+//print("Array: \(sortedArray)")
