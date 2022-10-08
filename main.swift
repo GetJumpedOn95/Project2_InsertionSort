@@ -1,5 +1,6 @@
 
 import Foundation
+import CoreFoundation
 
 func readFile(filename:String) -> Array<Substring> {
 
@@ -34,8 +35,10 @@ func insertionSort(strings:Array<Substring>) -> [Substring] {
     }
     return a
 }
-
+var startTime = CFAbsoluteTimeGetCurrent()
 var filename = "random-ordered-10e5.txt"
 var strings = readFile(filename:filename)
 let sortedArray = insertionSort(strings:strings)
 //print("Array: \(sortedArray)")
+let timeElapsed = (CFAbsoluteTimeGetCurrent() - startTime) * 1000 
+print("Time Elapsed \(timeElapsed) ms")
